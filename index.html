@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Monster Travel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta name="author" content="templatemo"> -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <nav class="navbar">
+                <a class="logo" href="index.html"><img src="images/Logo.png" class="logo" alt="Logo"/></a>
+                <ul class="nav-links menu">
+                    <!-- NAVIGATION MENUS -->
+                    <li><a href="index.html">Home</a></li>
+                    <li class="hotel">
+                        <a class="submenu" href="hotel.html">Hotel</a>
+                        <ul class="dropdown">
+                            <li><a href="/">Dropdown 1 </a></li>
+                            <li><a href="/">Dropdown 2</a></li>
+                            <li><a href="/">Dropdown 2</a></li>
+                        </ul>
+                    </li>
+      
+                    <li class="flight">
+                        <a class="submenu" href="flight.html">Flight</a>
+                        <ul class="dropdown">
+                            <li><a href="/">Dropdown 1 </a></li>
+                            <li><a href="/">Dropdown 2</a></li>
+                            <li><a href="/">Dropdown 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html"><img src="images/login.png" class="login">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- End Header -->
+        
+        <!-- Slide Show -->
+        <div class="slideshow">
+            <div class="home_image fade">
+                <img src="images/Home/travel1.jpg" style="width:100%;">
+                <p class="text_title" style="font-size:10vw;" >Travel !!!</p>
+                <p class="text" style="font-size:5vw;">Before you run out of time ...</p>
+            </div>
+            <div class="home_image fade">
+                <img src="images/Home/travel3.jpg" style="width:100%;">
+                <p class="text_title2" style="font-size:5vw;">Your World of Joy</p>
+                <p class="text2" style="font-size:5vw;">Find what makes you happy anytime, anywhere</p>
+            </div>
+        </div>
+        <!-- End Slide Show -->
+
+        <!-- Learn More -->
+        <section class="learn_more_hotel">
+            <div class="container">
+                <h2 style="text-align: -webkit-center;">Find hotel for your next trip?</h2>
+                <div class="learnmore_box">
+                    <div class="col-md-8 col-sm-8">
+                        <p style="text-align: -webkit-center,width=80%">Our rooms are designed with your comfort in mind and feature modern amenities. Whether you're traveling for business or pleasure, our hotel has everything you need for an enjoyable stay.</p>
+                        <br>
+                        <p style="text-align:center;"> Click the <b style="color: red;">button</b> for more information.</p>
+                        <div class="button">
+                            <a href="hotel.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end Learn More -->
+
+
+        <!-- Booking form -->
+        <div class="background_img" style="background-image: url(images/Home/travel2.jpg);">
+            <div class="hotel_form">
+                <form action="reservation.php" method="post">
+                    <h1 style="text-align: center; padding-bottom: 10px;">Reserve Your Room</h1>
+                    <hr>
+                    <div class="booking_info">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="book_name" placeholder="Your Name" pattern=[A-Z\sa-z]{3,20} required>
+                    </div>
+                    <div class="booking_info">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="book_email" placeholder="abc@example.com" required>
+                    </div>
+                    <div class="booking_info">
+                      <label for="phone">No. Phone</label>
+                      <input type="tel" id="phone" name="book_phone" placeholder="012-3456789" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                    </div>
+                    <hr>
+                    <div class="booking_info inlined">
+                      <label for="adult">Adults</label>
+                      <input type="number" id="adult" name="total_adults" placeholder="1" min="1" required>
+                    </div>
+                    <div class="booking_info inlined">
+                      <label for="child">Children</label>
+                      <input type="number" id="child" name="total_children" placeholder="0" min="0" required>
+                    </div>
+                    <div class="booking_info inlined">
+                      <label for="checkin_date">Check-in Date</label>
+                      <input type="date" id="checkin-date" name="checkin" required>
+                    </div>
+                    <div class="booking_info inlined">
+                      <label for="checkout_date">Check-out Date</label>
+                      <input type="date" id="checkout-date" name="checkout" required>
+                    </div>
+                    <div class="booking_info">
+                        <label for="hotel-select">Select Hotel</label>
+                        <select id="hotel_select" name="hotel" required>
+                            <option value="">Choose a Hotel</option>
+                            <option value="Hotek1">Hotek 1</option>
+                            <option value="Hotek2">Hotek 2</option>
+                            <option value="Hotek3">Hotek 3</option>
+                        </select>
+                      </div>
+                    <div class="booking_info">
+                      <label for="room_select">Select Room Preference</label>
+                      <select id="room_select" name="room" required>
+                          <option value="">Choose a Room from the List</option>
+                          <option value="Room1">Room 1</option>
+                          <option value="Room2">Room 2</option>
+                          <option value="Room3">Room 3</option>
+                      </select>
+                    </div>
+                    <button type="submit">Book</button>
+                  </form>
+            </div>
+        </div>
+    </body>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="top_btn" title="Back to top">^</button>
+
+    <!-- Site footer -->
+    <footer class="footer">
+        <div class="footer_sitemap">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">HOTEL</a></li>
+                <li><a href="#">FLIGHT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">HOTEL 1</a></li>
+                <li><a href="#">HOTEL 2</a></li>
+                <li><a href="#">FLIGHT 1</a></li>
+                <li><a href="#">FLIGHT 2</a></li>
+            </ul>
+            <ul>
+                <li><p>ABOUT US ................</p></li>
+            </ul>
+            <ul>
+                <li><p>GET IN TOUCH</p></li>
+                <li>PHONE : <a href="#">012-3456789</a></li>
+                <li>EMAIL : <a href="#">abc@example.com</a></li>
+                <li><p>ADDRESS : 123, Lot A, 12300, Kuala Lumpur</p></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <hr style="background-color: black; height: 3px;">
+            <small>Monster Travel &copy; 2023 All Rights Reserved</small>
+        </div>
+    </footer>
+
+
+    <!-- <footer>
+        <h2>Contact Us</h2>
+        <p>123 Main Street</p>
+        <p>City, State Zip Code</p>
+        <p>Phone: 123-456-7890</p>
+
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15934.382473771382!2d101.69978908715818!3d3.2004204000000027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3806f36aaaab%3A0x45a2690d8101704b!2zUHJpbWEgU2V0YXBha-WFrOWvkw!5e0!3m2!1szh-CN!2smy!4v1690536261113!5m2!1szh-CN!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </footer> -->
+    <script src="JS/javascript.js"></script>
+    
+    
+</html>

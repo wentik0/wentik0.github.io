@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>Monster Travel| Login</title>
+
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+		<nav class="navbar">
+			<!-- LOGO -->
+			<a class="logo" href="index.html"><img src="images/Logo.png" class="logo" alt="Logo"/></a>
+			<!-- NAVIGATION MENU -->
+			<ul class="nav-links menu">
+				<!-- NAVIGATION MENUS -->
+				<li><a href="index.html">Home</a></li>
+				<li class="hotel">
+					<a href="hotel.html">Hotel</a>
+					<!-- DROPDOWN MENU -->
+					<ul class="dropdown">
+						<li><a href="/">Dropdown 1 </a></li>
+						<li><a href="/">Dropdown 2</a></li>
+						<li><a href="/">Dropdown 2</a></li>
+					</ul>
+				</li>
+  
+				<li class="flight">
+					<a href="flight.html">Flight</a>
+					<!-- DROPDOWN MENU -->
+					<ul class="dropdown">
+						<li><a href="/">Dropdown 1 </a></li>
+						<li><a href="/">Dropdown 2</a></li>
+						<li><a href="/">Dropdown 2</a></li>
+					</ul>
+				</li>
+
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- End Header -->
+
+	<!-- container div -->
+	<div class="login-form">
+		<!-- Form section that contains the login and the signup form -->
+		<div class="form-section">
+			<!-- login form -->
+			<form class="login-box">
+				<h1>Login</h1>
+				<input type="email" class="login_email" placeholder="Email Address" required>
+				<input type="password" class="login_pwd" placeholder="Password">
+				<a class="forget_pwd_btn" href="forgetpsw.html">Forget password?</a>
+				<button class="login_btn">Login</button>
+				<div class="signup">
+					<p>Not yet member? <a onclick="document.getElementById('signup_form').style.display='block'" class="signup_btn">Signup now</a></p>
+				</div>
+			</form>
+
+			<!--Sign Up-->
+			<div id="signup_form" class="signup_modal">
+				<span onclick="document.getElementById('signup_form').style.display='none'" class="close">&times;</span>
+				<form class="signup" action="#" method="post">
+				  <div class="signup_form">
+					<h1>Sign Up</h1>
+					<br>
+					<p>Please fill in this form to create an account.</p>
+					<hr>
+					<label for="name"><b>Full Name</b></label>
+					<input type="text" placeholder="Enter Your Name" name="name" id="name" required>
+		  
+					<label for="phone"><b>Phone</b></label>
+					<input type="tel" placeholder="Enter Your Phone" name="phone" id="phone" required>
+		  
+					<label for="email"><b>Email</b></label>
+					<input type="email" placeholder="Enter your Email" name="email" id="email" required>
+			  
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="new_psw" id="new_psw" required>
+			  
+					<label for="psw_repeat"><b>Confirm Password</b></label>
+					<input type="password" placeholder="Confirm Password" name="confirm_psw" id="confirm_psw" required>
+			  
+					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+			  
+					<div class="clearfix">
+					  <input type="submit" class="cancelbtn" value="Cancel" id="cancelbtn" onclick="document.getElementById('signup_form').style.display='none'">
+					  <input type="submit" class="signupbtn" value="Sign Up">
+					</div>
+				  </div>
+				</form>
+			  </div>
+		</div>
+	</div>
+	<script src="js/login.js"></script>
+</body>
+</html>
